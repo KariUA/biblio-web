@@ -9,7 +9,9 @@ const Book = ({book}) => {
     return (
         <div className="book-container">
             <div className="book-image">
-                <div className="image-placeholder"></div>
+                <div className="book-cover">
+                    <img src={`http://covers.openlibrary.org/b/id/${book.is}-M.jpg`} alt={book.title} />
+                </div>
             </div>
             <div className='book-details'>
                 <div className="book-info">
