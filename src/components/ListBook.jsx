@@ -1,4 +1,5 @@
 import React from 'react';
+import Book from './Book';
 
 const ListBook = ({ books }) => { //Recibe la lista de libros como un prop(parámetro)
   return (
@@ -6,7 +7,7 @@ const ListBook = ({ books }) => { //Recibe la lista de libros como un prop(pará
       <h2>Results:</h2>
       <ul>
         {books.map((book, index) => (
-          <li key={index}>{book.title}</li>
+          <Book key={index} book={book} />
         ))}
       </ul>
     </div>
