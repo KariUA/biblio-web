@@ -1,10 +1,15 @@
 import React, { useState } from 'react';
+import { Input, Button, Navbar, NavbarContent,Select, SelectItem } from '@nextui-org/react';
+
+
 
 const SearchBook = ({ onSearch }) => {
-    const [query, setQuery] = useState(''); 
+    const [query, setQuery] = useState('');
     const [searchBy, setSearchBy] = useState('q');
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
+    const options = ["All", "Title", "Author", "Genre"];
+
 
     const handleSearch = async () => {
         setError('');
@@ -62,32 +67,52 @@ const SearchBook = ({ onSearch }) => {
     };
 
     return (
-        <div>
-            <div>
-                {/* Aquí se establece el texto de búsqueda, el filtro y el botón de búsqueda */}
-                <h2>Search Books</h2>
-                <input
+
+        <Navbar >
+            <NavbarContent as="div" className="items-center" justify="end">
+                <Input
+                    classNames={{
+                        base: "max-w-full sm:max-w-[10rem] h-10",
+                        mainWrapper: "h-full",
+                        input: "text-small",
+                        inputWrapper: "h-full font-normal text-default-500 bg-default-400/20 dark:bg-default-500/20",
+                    }}
+                    placeholder="Search by title, author or genre"
                     type="text"
-                    placeholder="Search by title, author, or genre"
+                    size="sm"
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                 />
-                <select value={searchBy} onChange={handleFilterChange}>
-                    <option value="q">All</option>
-                    <option value="title">Title</option>
-                    <option value="author">Author</option>
-                    <option value="genre">Genre</option>
-                </select>
+                <Select
+                    isRequired
+                    label="Filter"
+                    defaultSelectedKeys={["All"]}
+                    onChange={handleFilterChange}
+                    className="max-w-xs"
+                >
+                    {options.map((option) => (
+                        <SelectItem key={option} value={option}>
+                            {option}
+                        </SelectItem>
+                    ))}
+                </Select>
 
-                <button onClick={handleSearch} disabled={loading}>
-                    {loading ? 'Loading...' : 'Search'}
-                </button>
+                <Button
+                    color="primary"
+                    onClick={handleSearch}
+                    loading={loading}
+                >
+                    {loading ? "Loading..." : "Search"}
+                </Button>
+                </NavbarContent>
+            {error && <p style={{ color: 'red', marginTop: '10px' }}>{error}</p>}
+        </Navbar>
 
-            </div>
 
-            {error && <p>{error}</p>}
-        </div>
     );
+
 };
 
 export default SearchBook;
+
+
