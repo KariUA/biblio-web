@@ -1,0 +1,117 @@
+
+.contenedor {
+    display: flex; /* Flexbox */
+    margin-top: 20px; /* Margen superior */
+    background-color: blanchedalmond;
+    height: 650px; /* Alto del cuadro */
+    width: 95%; /* Ancho del cuadro */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.imagen {
+    width: 300px; /* Ancho del cuadro */
+    height: 500px; /* Alto del cuadro */
+    background-color: #ccc; /* Color de fondo gris */
+}
+
+.informacion {
+    margin-left: auto; /* Margen izquierdo */
+    margin-right: auto; /* Margen derecho */
+    height: 640px; /* Alto del cuadro */
+    width: 70%; /* Ancho del cuadro */
+    display: flex; /* Flexbox */
+    flex-direction: column; /* Dirección de la columna */
+    justify-content: space-between; /* Justificar el contenido */
+}
+
+.visual {
+    flex-wrap: wrap; /* Envolver */
+    margin-top: 20px; /* Margen superior */
+    margin-left: auto; /* Margen izquierdo */
+    margin-right: auto; /* Margen derecho */
+    align-items: center; /*alinear verticalmente al centro*/
+    height: 95%; /* Alto del cuadro */
+    width: 20%; /* Ancho del cuadro */
+}
+
+.titulo_autor {
+    width: 100%;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.sinopsis {
+    width: 100%;
+    height: 270px;
+    text-align: right;
+}
+
+.sinop {
+    margin-right: 100px;
+}
+
+.caja_descripcion {
+    border: 2px solid #000;
+    border-radius: 10px;
+    background-color: aliceblue;
+    width: 90%;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.lenguaje {
+    width: 100%;
+    height: 50px;
+}
+
+.detalles_atomicos {
+    flex-wrap: wrap; /* Envolver */
+    width: 100%;
+    height: 100px;
+    margin-bottom: 20px;
+    /*Distribuir los elementos horizontalmente en el espacio*/
+    justify-content: space-between;
+    display: flex; /* Flexbox */
+}
+
+.editor {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.publicacion {
+    border: 2px solid #000;
+    border-radius: 100%;
+    width: 150px;
+    height: 100%;
+    margin-left: 100px;
+    display: flex; /* Flexbox */
+    align-items: center;
+    justify-content: center;
+
+}
+
+.paginas {
+    border: 2px solid #000;
+    border-radius: 100%;
+    width: 150px;
+    height: 100%;
+    display: flex; /* Flexbox */
+    align-items: center;
+    justify-content: center;
+}
+
+.puntaje {
+    border: 2px solid #000;
+    border-radius: 100%;
+    width: 150px;
+    height: 100%;
+    display: flex; /* Flexbox */
+    align-items: center;
+    justify-content: center;
+    margin-right: 100px;
+}
