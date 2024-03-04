@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import SearchBook from "../components/SearchBook";
 import ListBook from "../components/ListBook";
 import { UserAuth } from "../context/AuthContext";
+import BookDetail from "../components/BookDetail";
 
 function Home() {
 
@@ -26,6 +27,7 @@ function Home() {
         <div>
             <SearchBook onSearch={handleSearch} />
             <ListBook books={searchResults} />
+           
         </div>
     );
 }

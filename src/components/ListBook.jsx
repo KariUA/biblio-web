@@ -8,6 +8,7 @@ const ListBook = ({ books }) => { //Recibe la lista de libros como un prop(pará
       <ul>
         {books.map((book, index) => (
           <Book key={index} book={book} />
+          
         ))}
       </ul>
     </div>
