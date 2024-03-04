@@ -4,6 +4,7 @@ import Login from '../pages/Login';
 import Info from '../pages/Info';
 import { UserAuth } from '../context/AuthContext';
 import CustomNavbar from '../components/CustomNavbar';
+import BookDetail from '../components/BookDetail';
 
 
 // TODO: 1. Al abrir la aplicación, el usuario debe ser redirigido a la página de inicio.
@@ -31,6 +32,7 @@ export function MyRoutes() {
                 <Route path="/" element={<Home />} />
                 <Route path="/info" element={<RequireAuth> <Info /></RequireAuth>} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/book/:key" element={ <BookDetail /> } />
             </Routes>
         </BrowserRouter>
     );

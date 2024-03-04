@@ -1,6 +1,8 @@
 import '../BookDetail.css';
 
 const PaginaLibro = () => {
+
+    const key = useParams().key;
     
         return (
             <div className='contenedor'>

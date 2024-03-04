@@ -27,6 +27,7 @@ const Book = ({book}) => {
                                     <p>Año de publicación: {book.first_publish_year}</p>
                                     <p>Cantidad de páginas: {book.number_of_pages_median}</p>
                                     <p>Puntaje: {ratings_averageRounded}</p>
+                                    <Link className="ver_mas" to={`/Book/${libro.key}`}>Ver mas</Link>
                                 </div>
                             </div>
                             <hr />
