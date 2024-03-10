@@ -3,6 +3,7 @@ import SearchBook from "../components/SearchBook";
 import ListBook from "../components/ListBook";
 import { UserAuth } from "../context/AuthContext";
 import BookDetail from "../components/BookDetail";
+import LastestReleaseList from "../components/LatestReleaseList";
 
 function Home() {
 
@@ -25,6 +26,7 @@ function Home() {
 
     return (
         <div>
+            <LastestReleaseList />
             <SearchBook onSearch={handleSearch} />
             <ListBook books={searchResults} />
            
