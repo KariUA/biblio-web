@@ -4,7 +4,7 @@ import Book from './Book';
 const ListBook = ({ books }) => { //Recibe la lista de libros como un prop(parámetro)
   return (
     <div>
-      <h2>Results:</h2>
+      <h2 className="text-center" hidden={books.length === 0}>Results:</h2>
       <ul>
         {books.map((book, index) => (
           <Book key={index} book={book} />

@@ -26,9 +26,9 @@ function Home() {
 
     return (
         <div>
-            <LastestReleaseList />
             <SearchBook onSearch={handleSearch} />
             <ListBook books={searchResults} />
+            <LastestReleaseList />
            
         </div>
     );
