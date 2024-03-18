@@ -2,6 +2,7 @@ import './Book.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import CoverNotAvailable from './CoverNotAvailable';
+import { Button } from '@nextui-org/react';
 
 
 const Book = ({book}) => {
@@ -32,7 +33,10 @@ const Book = ({book}) => {
                                     <p>Año de publicación: {book.first_publish_year}</p>
                                     <p>Cantidad de páginas: {book.number_of_pages_median}</p>
                                     <p>Puntaje: {ratings_averageRounded}</p>
-                                    <Link className="ver_mas" to={`/Book/${bookKey}`}>Ver más</Link>
+                                    <Button color="default" size="small" variant="faded" className="button">
+                                        <Link to={`/book/${bookKey}`}>View details</Link>
+                                    </Button>
+
                                 </div>
                             </div>
                             <hr />
