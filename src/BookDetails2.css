@@ -1,0 +1,59 @@
+.visual {
+    @apply flex flex-row items-start mb-8; 
+}
+
+.titulo_autor h1 {
+    @apply text-3xl font-bold;
+}
+
+.titulo_autor {
+    @apply mb-8;
+}
+
+.informacion {
+    @apply max-w-xl ml-4;
+    @apply mb-16;
+    @apply m-8;
+}
+
+.detalles_atomicos {
+    @apply flex flex-wrap;
+    @apply justify-between;
+    @apply mb-8;
+}
+
+.detalles_atomicos > div {
+    @apply flex-auto mb-4 mx-2;
+    @apply max-w-[calc(33.33%-1rem)];
+    @apply border border-gray-300 rounded-md;
+    @apply flex items-center justify-center;
+    @apply p-2;
+    @apply mr-4;
+}
+
+
+.contenedor_imagen {
+    @apply w-72 h-96 mb-8;
+    @apply m-8;
+}
+
+.sinopsis {
+    @apply mb-4;
+    @apply mb-8;
+}
+
+.caja_descripcion {
+    @apply inline-block;
+    @apply border border-white border-solid border-opacity-50;
+    @apply p-2;
+}
+
+.editor {
+    @apply mb-4;
+}
+
+.lenguaje,
+.publicacion,
+.paginas {
+    @apply mb-4;
+}
