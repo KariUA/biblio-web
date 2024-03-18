@@ -4,7 +4,6 @@ import { MyRoutes } from './routers/Routes';
 
 
 const App = () => {
-
   return (
     <NextUIProvider>
       <AuthContextProvider>

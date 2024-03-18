@@ -7,10 +7,6 @@ import CustomNavbar from '../components/CustomNavbar';
 import BookDetail from '../components/BookDetail';
 
 
-// TODO: 1. Al abrir la aplicación, el usuario debe ser redirigido a la página de inicio.
-    // 2. Si el usuario no está autenticado, y quiere ver detalles de un libro, debe ser redirigido a la página de registro.
-
-
 export function MyRoutes() {
 
     const {user} = UserAuth();

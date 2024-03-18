@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Textarea, Card } from "@nextui-org/react";
 import { UserAuth } from '../context/AuthContext';
 
+
 const Info = () => {
 
     const { user } = UserAuth();
@@ -12,14 +13,17 @@ const Info = () => {
     );
 
     return (
-        <div className="info-container" content='center' justify='center'>
-            <Card className="info-card" bordered shadow width="50%"  >
-                <h2>About BiblioWeb</h2>
+        <div className="info-container" content='center' justify='center' align='center' >
+            <Card className="info-card" bordered shadow width="50%"  responsive hoverable>
+                <h2>About BiblioWeb
+                    
+                </h2>
 
                 <h3>user: {user ? user.email : "No user"}</h3>
 
                 <Textarea
                     isReadOnly
+                    aria-readonly
                     variant="bordered"
                     labelPlacement="outside"
                     defaultValue={`

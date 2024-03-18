@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import SearchBook from "../components/SearchBook";
 import ListBook from "../components/ListBook";
 import { UserAuth } from "../context/AuthContext";
-import BookDetail from "../components/BookDetail";
-import LastestReleaseList from "../components/LatestReleaseList";
+import TrendingBooksList from "../components/TrendingBooksList";
+import RecentlyBookList from "../components/RecentlyBookList";
 
 function Home() {
 
@@ -22,13 +22,16 @@ function Home() {
         }
     };
 
-    console.log(user);
-
     return (
         <div>
             <SearchBook onSearch={handleSearch} />
             <ListBook books={searchResults} />
-            <LastestReleaseList />
+            {searchResults.length === 0 && (
+                <div>
+                    <TrendingBooksList />
+                    <RecentlyBookList />
+                </div>
+            )}
            
         </div>
     );

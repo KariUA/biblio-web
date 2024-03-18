@@ -2,8 +2,10 @@ import React from 'react';
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button } from "@nextui-org/react";
 import { useNavigate } from "react-router-dom";
 import { UserAuth } from "../context/AuthContext";
+import { ThemeSwitcher } from "./ThemeSwitcher";
 
 export default function CustomNavbar() {
+    
     const navigate = useNavigate();
     const { user, logout } = UserAuth();
 
@@ -45,11 +47,16 @@ export default function CustomNavbar() {
                         onClick={handleLoginClick}
                     >
                         {user ? `Sign Out (${user.displayName})` : "Login" }
-                        
-
                     </Button>
                 </NavbarItem>
             </NavbarContent>
+
+            <NavbarContent justify="center" className="menu">
+                <NavbarItem>
+                    <ThemeSwitcher />
+                </NavbarItem>
+            </NavbarContent>
+
         </Navbar>
     );
 }
