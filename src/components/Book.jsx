@@ -1,6 +1,7 @@
 import './Book.css';
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CoverNotAvailable from './CoverNotAvailable';
 
 
 const Book = ({book}) => {
@@ -10,18 +11,18 @@ const Book = ({book}) => {
     const ratings_averageRounded = book.ratings_average && Math.round(book.ratings_average);
     const bookKey = book.key.split('/')[2];
 
-    console.log(book.isbn[0]);
-
     return (
 
         <div className="book-container">
                     {book && (
-                        <>
-                            <div className="book-image">
-                                <div className="image-placeholder">
-                                    <img src={`https://covers.openlibrary.org/b/isbn/${book.isbn[0]}-M.jpg`} alt="Portada del libro" />
-                                </div>
+                <>
+                    <div>
+                        <div className="image-placeholder">
+                            <div className='portada'>
+                                <img src={`https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg`} alt="Portada del libro" />
                             </div>
+                        </div>
+                    </div>
                             <div className='book-details'>
                                 <div className="book-info">
                                     <p>Título: {book.title}</p>
